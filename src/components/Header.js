@@ -7,7 +7,7 @@ import HomeOutlinedIcon from "@material-ui/icons/HomeOutlined";
 import FolderOpenIcon from "@material-ui/icons/FolderOpen";
 import CodeIcon from "@material-ui/icons/Code";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
-import Grid from "@material-ui/core/Grid";
+import Box from "@material-ui/core/Box";
 
 import { grey, blue, red } from "@material-ui/core/colors";
 
@@ -23,7 +23,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: blue[200],
     color: "#263238",
-    maxWidth: "100%",
+    minWidth: "100em",
+    display: "flex",
   },
 }));
 
@@ -38,12 +39,13 @@ export default function SimpleTabs(props) {
   };
 
   return (
-    <Grid item xs={12}>
-      <AppBar position="static" className={classes.root}>
+    <Box centered>
+      <AppBar position="sticky" className={classes.root}>
         <Tabs
           value={value}
           onChange={handleChange}
           aria-label="Navigation Tabs"
+          centered
         >
           <Tab
             label="Home"
@@ -67,6 +69,6 @@ export default function SimpleTabs(props) {
           />
         </Tabs>
       </AppBar>
-    </Grid>
+    </Box>
   );
 }

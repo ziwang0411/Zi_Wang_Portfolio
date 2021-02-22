@@ -35,6 +35,7 @@ const useStyles = makeStyles({
     background: "linear-gradient(#bbdefb, #9198e5);",
     padding: "0 5px",
     maxWidth: "100%",
+    alignItems: "center",
   },
   footer: {
     padding: "2%",
